@@ -37,6 +37,27 @@ function compareNumbers() {
         z.style.borderStyle = "solid";
         z.style.borderWidth = "5px";
         z.style.borderColor = "black";
+        z.style.color = "red";
+        z.style.padding = "20px";
+        z.style.textAlign = "center";
+        counter++;
+        c.innerHTML = "You have tried " + counter + " times to get it right.";
+        c.style.backgroundColor = "white";
+        c.style.borderStyle = "solid";
+        c.style.borderWidth = "5px";
+        c.style.borderColor = "black";
+        c.style.color = "red";
+        c.style.padding = "20px";
+        c.style.textAlign = "center";
+        counter = 0;
+        document.querySelector("body").style.backgroundColor = "green";
+    }
+    if (a == b) {
+        z.innerHTML = "Numbers are the same. The computer got " + b + ", and the user got " + a + ".";
+        z.style.backgroundColor = "white";
+        z.style.borderStyle = "solid";
+        z.style.borderWidth = "5px";
+        z.style.borderColor = "black";
         z.style.color = "green";
         z.style.padding = "20px";
         z.style.textAlign = "center";
@@ -50,8 +71,6 @@ function compareNumbers() {
         c.style.textAlign = "center";
         counter = 0;
         document.querySelector("body").style.backgroundColor = "green";
-    
-
     }
 
     resetInput();
