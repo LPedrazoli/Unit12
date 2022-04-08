@@ -1,0 +1,27 @@
+#getNumber {
+    font-size: 22px;
+    text-align: center;
+}
+
+.inputNumberBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#paragraph {
+    margin-left: 20px;
+    padding: 30px;
+}
+
+.header {
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.instructions {
+    color: black;
+    padding: 20px;
+    text-align: center;
+}

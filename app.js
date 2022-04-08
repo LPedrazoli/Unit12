@@ -5,23 +5,58 @@ userNum.addEventListener("keydown", function (e) {
     }
 })
 
+userNum.focus();
+
+let counter = 0;
+
 function run() {
-    document.getElementById("paragraph").innerHTML = "Hello World!";
-    document.getElementById("paragraph").style.backgroundColor = "green";
-    document.getElementById("paragraph").style.color = "red";
-    document.getElementById("paragraph").style.padding = "20px";
     randomNum();
     userNumber();
     compareNumbers();
-
 }
 
 function randomNum() {
     let ran = Math.floor(Math.random() * 10);
-    let x = document.getElementById("random")
-    x.innerHTML = ran;
-    x.style.textAlign = "center";
-    x.style.backgroundColor = "green";
-    x.style.color = "red";
-    x.style.padding = "20px";
+    return  ran;
+}
+
+function userNumber() {
+    let user = document.getElementById("getNumber").value;
+    return user;
+}
+
+function compareNumbers() {
+    let a = userNumber();
+    let b = randomNum();
+    let z = document.getElementById("compare");
+    let c = document.getElementById("counter");
+
+    if (a != b) {
+        z.innerHTML = "Numbers are not the same. The computer got " + b + ", and the user got " + a + ".";
+        z.style.backgroundColor = "white";
+        z.style.borderStyle = "solid";
+        z.style.borderWidth = "5px";
+        z.style.borderColor = "black";
+        z.style.color = "green";
+        z.style.padding = "20px";
+        z.style.textAlign = "center";
+        c.innerHTML = "You have tried " + counter + " times to get it right.";
+        c.style.backgroundColor = "white";
+        c.style.borderStyle = "solid";
+        c.style.borderWidth = "5px";
+        c.style.borderColor = "black";
+        c.style.color = "green";
+        c.style.padding = "20px";
+        c.style.textAlign = "center";
+        counter = 0;
+        document.querySelector("body").style.backgroundColor = "green";
+    
+
+    }
+
+    resetInput();
+}
+
+function resetInput() {
+    document.getElementById("getNumber").value = "";
 }
